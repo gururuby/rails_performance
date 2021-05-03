@@ -38,6 +38,9 @@ module RailsPerformance
 
   mattr_accessor :enabled
   @@enabled = true
+  
+  mattr_accessor :rake_tasks_performance
+  @@rake_tasks_performance = true
 
   # default path where to mount gem
   mattr_accessor :mount_at

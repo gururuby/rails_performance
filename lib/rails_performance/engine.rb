@@ -58,7 +58,7 @@ module RailsPerformance
       ActiveRecord::LogSubscriber.send :prepend, RailsPerformance::Extensions::Db
     end
 
-    if defined?(::Rake::Task)
+    if defined?(::Rake::Task) && RailsPerformance.enabled
       require_relative './gems/rake_ext.rb'
       RailsPerformance::Gems::RakeExt.init
     end
